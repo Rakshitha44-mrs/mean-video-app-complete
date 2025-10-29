@@ -1,0 +1,29 @@
+<div class="upload-section">
+  <form (submit)="uploadVideo($event)">
+    <input
+      type="text"
+      [(ngModel)]="videoTitle"
+      name="title"
+      placeholder="Enter video title"
+      required
+    />
+    <input type="file" (change)="onFileSelected($event)" required />
+    <button type="submit">Upload</button>
+  </form>
+</div>
+
+<div class="video-list">
+  <h3>Uploaded Videos</h3>
+  <div *ngFor="let v of videos">
+    <p>{{ v.title }}</p>
+    <video
+      width="400"
+      controls
+      [src]="'http://localhost:4000/uploads/' + v.filename"
+    ></video>
+  </div>
+</div>
+
+
+
+
