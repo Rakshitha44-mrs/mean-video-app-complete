@@ -4,16 +4,14 @@
   "description": "Loc8r - MEAN stack location finder web application",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
-    "test": "NODE_ENV=test nodemon ./bin/www",
-    "seed": "node seed.js",
-    "build-client": "uglifyjs app_client/**/*.js -o public/javascripts/loc8r.min.js",
-    "build-css": "sass public/stylesheets/style.scss public/stylesheets/style.css",
-    "watch-css": "sass --watch public/stylesheets/style.scss:public/stylesheets/style.css",
-    "build": "npm run build-client && npm run build-css",
-    "dev-full": "concurrently \"npm run dev\" \"npm run watch-css\""
-  },
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --configuration production",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  }
+  
   "keywords": [
     "mean",
     "mongodb",
