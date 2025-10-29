@@ -1,0 +1,22 @@
+{
+  "name": "mean-video-app-server",
+  "version": "1.0.0",
+  "description": "Backend server for MEAN video app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2",
+    "mongoose": "^7.6.0",
+    "multer": "^2.0.0",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+
